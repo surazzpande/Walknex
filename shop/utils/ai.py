@@ -7,8 +7,8 @@ from langchain_core.output_parsers import StrOutputParser
 import weaviate
 from django.conf import settings
 import logging
-import functools
 import time
+import urllib.parse
 
 logger = logging.getLogger(__name__)
 
@@ -33,6 +33,10 @@ class AIException(Exception):
     pass
 
 class ChatbotAI:
+    """
+    Backend AI logic for Walknex chatbot.
+    Designed for seamless integration with a Material UI/UX frontend.
+    """
     _schema_checked = False
     _schema_lock = threading.Lock()
     _cache: Dict[str, Any] = {}
@@ -44,19 +48,23 @@ class ChatbotAI:
         self.llm = ChatOpenAI(
             model_name="gpt-4",
             temperature=0.7,
-            api_key=settings.OPENAI_API_KEY
+            api_key=os.environ.get("OPENAI_API_KEY", settings.OPENAI_API_KEY)
         )
         self.output_parser = StrOutputParser()
         self.weaviate_client = self._init_weaviate_client()
         self.conversation_prompt = self._build_prompt()
         self._ensure_schema()
+        # Debug log for env vars
+        logger.info(f"OPENAI_API_KEY loaded: {bool(os.environ.get('OPENAI_API_KEY', settings.OPENAI_API_KEY))}")
+        logger.info(f"WEAVIATE_URL loaded: {os.environ.get('WEAVIATE_URL', settings.WEAVIATE_URL)}")
+        logger.info(f"WEAVIATE_API_KEY loaded: {bool(os.environ.get('WEAVIATE_API_KEY', settings.WEAVIATE_API_KEY))}")
 
     def _validate_env(self) -> None:
         """Validates required environment variables."""
         required = [
-            ("OPENAI_API_KEY", settings.OPENAI_API_KEY),
-            ("WEAVIATE_URL", settings.WEAVIATE_URL),
-            ("WEAVIATE_API_KEY", settings.WEAVIATE_API_KEY),
+            ("OPENAI_API_KEY", os.environ.get("OPENAI_API_KEY", getattr(settings, "OPENAI_API_KEY", None))),
+            ("WEAVIATE_URL", os.environ.get("WEAVIATE_URL", getattr(settings, "WEAVIATE_URL", None))),
+            ("WEAVIATE_API_KEY", os.environ.get("WEAVIATE_API_KEY", getattr(settings, "WEAVIATE_API_KEY", None))),
         ]
         for name, value in required:
             if not value:
@@ -64,11 +72,13 @@ class ChatbotAI:
                 raise AIException(f"{name} is not set")
 
     def _init_weaviate_client(self) -> weaviate.Client:
-        """Initializes the Weaviate client."""
+        """Initializes the Weaviate client (v3 style for compatibility)."""
         try:
             client = weaviate.Client(
-                url=settings.WEAVIATE_URL,
-                auth_client_secret=weaviate.AuthApiKey(api_key=settings.WEAVIATE_API_KEY)
+                url=os.environ.get("WEAVIATE_URL", settings.WEAVIATE_URL),
+                auth_client_secret=weaviate.AuthApiKey(
+                    api_key=os.environ.get("WEAVIATE_API_KEY", settings.WEAVIATE_API_KEY)
+                )
             )
             logger.info("Connected to Weaviate")
             return client
@@ -247,6 +257,7 @@ class ChatbotAI:
         """
         Generates a response to the user's message, including product recommendations if relevant.
         Uses caching for repeated queries.
+        Returns a dict ready for Material UI/UX frontend.
         """
         try:
             # Use cache for repeated conversation history
@@ -269,17 +280,26 @@ class ChatbotAI:
             product_related = any(word in message.lower() for word in product_keywords)
             recommendations = self.get_similar_products(message) if product_related else []
 
+            # Structure for Material UI/UX frontend
             return {
-                "message": response,
+                "message": {
+                    "text": response,
+                    "sender": "bot",
+                    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                },
                 "recommendations": recommendations
             }
         except Exception as e:
             logger.error(f"Error generating response: {e}", exc_info=True)
             return {
-                "message": (
-                    "I apologize, but I'm having trouble processing your request. "
-                    "Please try again or contact our support team for assistance."
-                ),
+                "message": {
+                    "text": (
+                        "I apologize, but I'm having trouble processing your request. "
+                        "Please try again or contact our support team for assistance."
+                    ),
+                    "sender": "bot",
+                    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S")
+                },
                 "recommendations": []
             }
 

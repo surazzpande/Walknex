@@ -6,6 +6,7 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
 from django.views.generic import TemplateView
+from . import views
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -30,4 +31,5 @@ urlpatterns = [
 # Serve React frontend (index.html) for all other routes
 urlpatterns += [
     re_path(r'^.*$', TemplateView.as_view(template_name='index.html')),
+    path('env-test/', views.env_test, name='env_test'),
 ]

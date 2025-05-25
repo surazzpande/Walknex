@@ -2,6 +2,9 @@ from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
+import os
+
 from .models import Category, Product, UserProfile, Order, Review, ChatSession, Wishlist
 from .serializers import (
     CategorySerializer, ProductSerializer, UserProfileSerializer,
@@ -124,3 +127,10 @@ class WishlistView(APIView):
         product = get_object_or_404(Product, id=product_id)
         wishlist.products.remove(product)
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+def env_test(request):
+    return JsonResponse({
+        "OPENAI_API_KEY": bool(os.environ.get("OPENAI_API_KEY")),
+        "WEAVIATE_URL": os.environ.get("WEAVIATE_URL"),
+        "WEAVIATE_API_KEY": bool(os.environ.get("WEAVIATE_API_KEY")),
+    })
