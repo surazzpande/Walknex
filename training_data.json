@@ -1,0 +1,445 @@
+{
+  "products": [
+    {
+      "name": "Swift Pace Runner",
+      "description": "The Swift Pace Runner is a high-performance running shoe designed for maximum comfort and durability. With its lightweight design and advanced cushioning technology, it offers superior support for all types of runners.",
+      "price": "\u00a395.99",
+      "category": "Running Shoes",
+      "image": "https://example.com/images/swiftpacerunner.jpg",
+      "features": [
+        "Advanced cushioning system for maximum comfort",
+        "Breathable mesh upper for superior ventilation",
+        "Durable rubber outsole for long-lasting wear",
+        "Lightweight design for optimal running efficiency",
+        "Reflective detailing for improved visibility"
+      ],
+      "suitableFor": [
+        "Long-distance running",
+        "Short-distance running",
+        "Trail running",
+        "Treadmill running",
+        "Casual jogging"
+      ],
+      "footType": [
+        "Neutral",
+        "Overpronation",
+        "Underpronation"
+      ]
+    },
+    {
+      "name": "Clarks CloudSteppers Casual Trainers",
+      "description": "These casual trainers from Clarks are part of their CloudSteppers range. Crafted from soft textile, they feature a lightweight, durable sole and Ortholite footbed for ultimate comfort. Perfect for everyday wear, they're a versatile addition to any wardrobe.",
+      "price": "59.99 GBP",
+      "category": "Casual Sneakers",
+      "image": "https://example.com/clarks_cloudsteppers.jpg",
+      "features": [
+        "Soft textile upper",
+        "Lightweight EVA sole",
+        "Ortholite footbed",
+        "Lace-up fastening"
+      ],
+      "suitableFor": [
+        "Everyday wear",
+        "Walking",
+        "Casual outings"
+      ],
+      "footType": [
+        "Flat",
+        "Normal",
+        "High arch"
+      ]
+    },
+    {
+      "name": "Adidas Ultraboost 21 Running Shoes",
+      "description": "Designed for long-distance comfort and style, the Adidas Ultraboost 21 running shoes are a perfect blend of advanced technology and aesthetic appeal. With responsive cushioning and a flexible outsole, these shoes will definitely give you an extra boost in your training sessions.",
+      "price": "149.99 GBP",
+      "category": "Training Shoes",
+      "image": "https://example.com/images/adidas_ultraboost_21.jpg",
+      "features": [
+        "Primeblue material made with Parley Ocean Plastic",
+        "Supportive heel counter for unrestricted fit",
+        "Boost midsole for incredible energy return",
+        "Continental\u2122 Rubber outsole for extraordinary traction"
+      ],
+      "suitableFor": [
+        "Long-distance running",
+        "High-intensity workouts",
+        "Casual wear"
+      ],
+      "footType": [
+        "Neutral",
+        "Overpronation"
+      ]
+    },
+    {
+      "name": "Mountain Trekker Hiking Boots",
+      "description": "Handcrafted with waterproof, high-quality leather, Mountain Trekker Hiking Boots are designed for the hiking enthusiast. These boots provide exceptional support and durability for every terrain, ensuring comfort and stability on every step of your journey.",
+      "price": "119.99 GBP",
+      "category": "Hiking Boots",
+      "image": "https://example.com/images/mountaintrekkerhikingboots.jpg",
+      "features": [
+        "Waterproof leather upper",
+        "Durable rubber sole for grip",
+        "Padded collar and tongue for extra comfort",
+        "Breathable lining to keep feet dry",
+        "Reinforced toe box for protection",
+        "Quick lacing system for easy adjustment"
+      ],
+      "suitableFor": [
+        "Hiking",
+        "Trekking",
+        "Mountain climbing",
+        "Outdoor activities"
+      ],
+      "footType": [
+        "Normal",
+        "Flat",
+        "High arch"
+      ]
+    },
+    {
+      "name": "Berghaus Men's Expeditor Ridge II Walking Shoes",
+      "description": "Experience maximum comfort and protection with the Berghaus Men's Expeditor Ridge II Walking Shoes. These shoes are designed to tackle any terrain with their durable and high-grip outsole. The waterproof AQ lining ensures your feet stay dry, while the EVA midsole provides excellent cushioning.",
+      "price": "90.00 GBP",
+      "category": "Walking Shoes",
+      "image": "https://example.com/images/BerghausMensExpeditorRidgeIIWalkingShoes.jpg",
+      "features": [
+        "AQ waterproof lining",
+        "OPTI-STUD outsole",
+        "Durable leather upper",
+        "EVA midsole",
+        "Ortholite footbed"
+      ],
+      "suitableFor": [
+        "Outdoor walks",
+        "Hiking",
+        "Everyday use"
+      ],
+      "footType": [
+        "Neutral",
+        "High arch",
+        "Low arch"
+      ]
+    }
+  ],
+  "conversations": [
+    {
+      "user_query": "Hello!",
+      "assistant_response": "Hello! Welcome to our shoe store. How may I assist you today?",
+      "context": [
+        "greeting",
+        "general"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "Hi there!",
+      "assistant_response": "Hello! Welcome to our shoe store. How may I assist you today?",
+      "context": [
+        "greeting"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "Good morning, I just came in.",
+      "assistant_response": "Good morning! Welcome to our store. How can I assist you today?",
+      "context": [
+        "greeting"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "Good afternoon, I just walked in.",
+      "assistant_response": "Good afternoon! Welcome to our store. How can I assist you with your shoe needs today?",
+      "context": [
+        "greeting",
+        "general"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "Good evening, how are you?",
+      "assistant_response": "Good evening! I'm doing great, thank you. How can I assist you with your shoe needs today?",
+      "context": [
+        "greeting",
+        "general"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "I think I've found everything I need. Thank you for your help!",
+      "assistant_response": "You're very welcome! I'm glad I could assist. Feel free to come back anytime you have more shoe needs or questions. Have a fantastic day!",
+      "context": [
+        "farewell",
+        "general",
+        "support"
+      ],
+      "intent": "farewell"
+    },
+    {
+      "user_query": "Thank you for your help today, I'm heading out now.",
+      "assistant_response": "You're welcome! I'm so glad I could assist you today. Don't hesitate to come back if you have more questions or need help with anything else. Have a fantastic day!",
+      "context": [
+        "farewell",
+        "general",
+        "support"
+      ],
+      "intent": "farewell"
+    },
+    {
+      "user_query": "Thank you for all your help today, I'll be heading off now.",
+      "assistant_response": "You're very welcome! I'm glad I could assist you. Don't hesitate to return if you have any more questions. Have a lovely day!",
+      "context": [
+        "farewell",
+        "appreciation",
+        "general"
+      ],
+      "intent": "farewell"
+    },
+    {
+      "user_query": "Hello there, how are you?",
+      "assistant_response": "Hello! I'm just fine, thank you for asking. How can I assist you with your shoe shopping today?",
+      "context": [
+        "greeting",
+        "general"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "What can you help me with?",
+      "assistant_response": "I can assist you in a variety of ways! From helping you find the perfect pair of shoes that fit your style and comfort needs, to providing information on our latest collections and offers. I can also guide you on shoe care and maintenance. Just let me know what you need!",
+      "context": [
+        "greeting",
+        "general",
+        "support"
+      ],
+      "intent": "general_query"
+    },
+    {
+      "user_query": "What do you sell?",
+      "assistant_response": "Hello! We sell a wide variety of shoes for both men and women. Our collection includes sneakers, formal shoes, boots, sandals, and so much more. We also offer shoe care products. Let me know what you're looking for and I'd be happy to assist you further!",
+      "context": [
+        "greeting",
+        "general",
+        "support"
+      ],
+      "intent": "general_query"
+    },
+    {
+      "user_query": "Can you tell me about your store?",
+      "assistant_response": "Absolutely! We're a British family-owned shoe store that's been providing high-quality footwear for over 20 years. We offer a wide variety of styles, from formal shoes, comfortable casuals to athletic trainers. We pride ourselves on our excellent customer service and knowledgeable staff who are always ready to assist you in finding the perfect pair of shoes. Whether you're looking for something for a special occasion or just everyday wear, we've got you covered!",
+      "context": [
+        "store_info",
+        "general"
+      ],
+      "intent": "general_query"
+    },
+    {
+      "user_query": "Are you a real person?",
+      "assistant_response": "I'm an artificial intelligence designed to help answer your questions about shoes to the best of my ability. Can I assist you with anything else today?",
+      "context": [
+        "greeting",
+        "general",
+        "support"
+      ],
+      "intent": "general_query"
+    },
+    {
+      "user_query": "What's your name?",
+      "assistant_response": "Hello! I'm your virtual assistant here at the shoe store, you can call me Assisty. How may I assist you today?",
+      "context": [
+        "greeting",
+        "general"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "Hello, I need some help in choosing a pair of running shoes. Any recommendations?",
+      "assistant_response": "Of course, I'd be more than happy to help you! Could you please tell me a bit more about your running habits? For instance, how often do you run, and what kind of terrain do you typically run on? This will help me recommend the best shoes for your needs.",
+      "context": [
+        "greeting",
+        "general",
+        "support"
+      ],
+      "intent": "need_assistance"
+    },
+    {
+      "user_query": "Can you assist me?",
+      "assistant_response": "Of course! I'd be happy to help. What can I assist you with today?",
+      "context": [
+        "greeting",
+        "support"
+      ],
+      "intent": "requesting_assistance"
+    },
+    {
+      "user_query": "Hello, I'm wondering if you can help me find a pair of running shoes with good arch support?",
+      "assistant_response": "Of course, I'd be happy to assist you with that! We have several running shoes that provide excellent arch support. Could you please let me know your shoe size and if you have any brand preferences, so I can provide the best options for you?",
+      "context": [
+        "greeting",
+        "product_inquiry",
+        "support"
+      ],
+      "intent": "general_query"
+    },
+    {
+      "user_query": "Hello, I bought a pair of shoes from your store last week and they're a bit tight. What can I do?",
+      "assistant_response": "Hello! I'm sorry to hear that the shoes you've purchased are not fitting well. We do offer exchanges or returns within 30 days of purchase. Would you like to exchange them for a larger size, or would you prefer a refund?",
+      "context": [
+        "support",
+        "returns",
+        "exchanges"
+      ],
+      "intent": "customer_support_query"
+    },
+    {
+      "user_query": "I'm not really sure about my shoe size. Can you help me figure it out?",
+      "assistant_response": "Of course, I'd be happy to help you. Shoe sizes can be a bit tricky sometimes. To get an accurate size, it's best to measure your foot. Do you have a measuring tape handy?",
+      "context": [
+        "size guidance",
+        "customer support",
+        "shoe fitting"
+      ],
+      "intent": "support_query"
+    },
+    {
+      "user_query": "Hi there, I've taken up running recently and I'm looking for some good running shoes. Can you recommend any?",
+      "assistant_response": "Of course, I'd be happy to help! There are a few different factors to consider when choosing running shoes, such as your running style, the shape of your feet and your personal preferences. We carry a variety of top brands like Nike, Adidas, and New Balance. For a beginner runner, I might suggest something like the Nike Pegasus series - they're well-rounded running shoes that offer good cushioning and support. Alternatively, the Adidas Ultraboost line is also very popular for its comfort and responsiveness. Would you like to try these on or perhaps you have a specific brand in mind?",
+      "context": [
+        "greeting",
+        "product_recommendation",
+        "running_shoes"
+      ],
+      "intent": "product_query"
+    },
+    {
+      "user_query": "Hello, I recently bought a pair of leather shoes from your store. Could you advise me on how to properly care for them?",
+      "assistant_response": "Of course, I'd be delighted to help! Firstly, you should clean your leather shoes regularly to remove dirt and dust. A soft cloth or a brush designed specifically for leather shoes will work well. Secondly, consider using a leather conditioner to keep the material supple and prevent cracking. It's best to apply this every few months. Lastly, if the shoes get wet, let them dry naturally rather than applying heat. Store them in a well-ventilated area away from direct sunlight. Also, using shoe trees can help maintain their shape. Remember, each pair of shoes is unique, so what works for one may not work for the other. Always follow the manufacturer's instructions.",
+      "context": [
+        "shoe care",
+        "leather shoes",
+        "maintenance",
+        "support"
+      ],
+      "intent": "provide_information"
+    },
+    {
+      "user_query": "Can you help me understand the difference between the Nike Air Max and the Adidas Ultraboost?",
+      "assistant_response": "Of course, I'd be happy to help! The Nike Air Max and the Adidas Ultraboost are both fantastic shoes, but they do have some differences. The Nike Air Max is known for its iconic visible air cushioning system which provides excellent impact protection, making it great for running and everyday wear. They also have a slightly more retro aesthetic. The Adidas Ultraboost, on the other hand, is loved for its responsive boost midsole that delivers exceptional energy return, making it a favourite amongst long-distance runners. It also has a more contemporary, sleek design. Both shoes offer great comfort, but the choice would depend on your specific needs and style preference. Would you like to try them on?",
+      "context": [
+        "shoes",
+        "comparing",
+        "Nike Air Max",
+        "Adidas Ultraboost"
+      ],
+      "intent": "product_query"
+    },
+    {
+      "user_query": "Hello, I've got bunions and I'm struggling to find comfortable shoes. Can you suggest anything?",
+      "assistant_response": "Of course, I'd be happy to help. For bunions, I'd suggest looking at shoes with a wide toe box. This can help reduce discomfort. Comfort brands like Clarks or New Balance often have great options. Additionally, you may want to avoid high heels or pointed shoes, as these can exacerbate the condition. We also offer shoes with extra cushioning that might alleviate the pressure on your feet. Would you like me to show you some options?",
+      "context": [
+        "greeting",
+        "support",
+        "shoe advice",
+        "foot condition"
+      ],
+      "intent": "provide_recommendation"
+    },
+    {
+      "user_query": "Hello there, could you please tell me how much the Nike Air Max shoes cost?",
+      "assistant_response": "Good day! Absolutely, the Nike Air Max shoes are currently priced at \u00a3120. They're a great choice with excellent comfort and style. Would you like to try them on or need any more information?",
+      "context": [
+        "greeting",
+        "product_query",
+        "support"
+      ],
+      "intent": "product_query"
+    },
+    {
+      "user_query": "Hello, I purchased a pair of shoes last week but they're a bit too tight. What's your return policy?",
+      "assistant_response": "Hello! I'm sorry to hear that the shoes aren't the perfect fit. As per our return policy, you can return any product within 30 days of your purchase date, provided that it's in the original condition, unworn and with the original packaging. If you've made your purchase online, you can return the shoes by mail or directly at any of our stores. On the other hand, if you've bought them in-store, you must return them at the store. Please do bring your receipt or proof of purchase. Would you like any assistance with finding a different size or style?",
+      "context": [
+        "returns",
+        "support",
+        "policy"
+      ],
+      "intent": "support_request"
+    },
+    {
+      "user_query": "Can you tell me what materials these shoes are made of?",
+      "assistant_response": "Certainly! These shoes are made of high-quality leather for the upper part, with a durable rubber sole. The lining inside is a breathable fabric to keep your feet comfortable. Is there anything else you would like to know about our products?",
+      "context": [
+        "product_information",
+        "shoe_materials",
+        "customer_support"
+      ],
+      "intent": "product_query"
+    },
+    {
+      "user_query": "Hello, I'm looking for a casual shoe that I can wear to work and to a night out. Any recommendations?",
+      "assistant_response": "Hello! I'd recommend a classic loafer or brogue. They're versatile, comfortable for a day at the office and stylish enough for an evening out. Our Clarks collection offers a great range of both styles. Would you like to see some options?",
+      "context": [
+        "greeting",
+        "general",
+        "product_recommendation"
+      ],
+      "intent": "product_query"
+    },
+    {
+      "user_query": "I'm looking for a gift for my wife, she loves comfortable and stylish shoes. Can you suggest something?",
+      "assistant_response": "Absolutely, I'd be delighted to help! We have a great range of footwear that combines comfort and style. For instance, our 'Elegance Collection' features cushioned flats with gorgeous designs that are very popular with our female customers. Another great option could be our 'Classic Leather Boots', they are trendy, comfortable and very versatile. However, if your wife prefers sporty style, our 'Active Sneakers' could be a perfect match. They are lightweight, cushy, and come in a variety of vibrant colours. May I know her shoe size and preferred colours to narrow down the best options?",
+      "context": [
+        "gift_suggestion",
+        "customer_support",
+        "product_query"
+      ],
+      "intent": "general_query"
+    },
+    {
+      "user_query": "hi",
+      "assistant_response": "Hello! Welcome to Walknex. How can I help you find your perfect pair of shoes today?",
+      "context": [
+        "greeting",
+        "welcome"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "hello",
+      "assistant_response": "Hi there! I'm your Walknex shopping assistant. What kind of shoes are you looking for today?",
+      "context": [
+        "greeting",
+        "welcome"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "good morning",
+      "assistant_response": "Good morning! Welcome to Walknex. I'm here to help you find the perfect footwear. What can I assist you with?",
+      "context": [
+        "greeting",
+        "welcome",
+        "morning"
+      ],
+      "intent": "greeting"
+    },
+    {
+      "user_query": "bye",
+      "assistant_response": "Thank you for chatting with me! Have a great day, and don't hesitate to come back if you need any help with your footwear needs.",
+      "context": [
+        "farewell",
+        "closing"
+      ],
+      "intent": "farewell"
+    },
+    {
+      "user_query": "thanks",
+      "assistant_response": "You're welcome! If you need any further assistance, don't hesitate to ask. Happy shopping!",
+      "context": [
+        "gratitude",
+        "closing"
+      ],
+      "intent": "farewell"
+    }
+  ]
+}
